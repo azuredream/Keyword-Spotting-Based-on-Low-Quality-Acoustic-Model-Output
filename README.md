@@ -11,5 +11,11 @@ I strongly recommend removing the language model of your speech recognition prog
 
 ## Using
 demo keyword: 您好请稍等；再见；请交费；
+
+
 import spotting
+
 result = getWord(input)
+
+##parameters
+simithreshold: 78 default. If the Similarity of Pinyin string of the input and keyword is greater than simithreshold, the word will be corrected to the target word and added to output.
