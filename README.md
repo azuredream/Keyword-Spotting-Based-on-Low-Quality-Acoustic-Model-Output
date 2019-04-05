@@ -10,12 +10,12 @@ Output: "keyword1;keyword1;keyword2;keyword4....."
 I strongly recommend removing the language model of your speech recognition program so that the string can convey the row speech more faithfully. After all, if your acoustic model is only 70 percent accurate, Kenlm can't help you much more than distorting row pronunciation.
 
 ## Using
-demo keyword: 您好请稍等；再见；请交费；
-
-
+demo keyword: 你好；再见；没错；
+###code
 import spotting
-
-result = getWord(input)
-
+  ss = keywordSpoter(["keyword1","keyword2","keyword3"],simithreashold = 78)
+  ss.getWord(inputstr)
+###demo
+$ python spotting.py
 ##parameters
 simithreshold: 78 default. If the Similarity of Pinyin string of the input and keyword is greater than simithreshold, the word will be corrected to the target word and added to output.
